@@ -1,0 +1,260 @@
+$dark-gray: #212121;
+$orange: #fc7e01;
+$light-blue: #a3cadb;
+$blue: #70aabd;
+
+.create-order-page {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    flex-grow: 1;
+
+    .create-order__title {
+        margin-bottom: 32px;
+    }
+
+    .create-order__block {
+        .create-order__form {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+
+            .submit-order__button {
+                width: auto;
+            }
+
+            .client-info__block {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                .client-info__row {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+
+                    .client-info__item {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        flex-wrap: wrap;
+
+                        label {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $blue;
+                        }
+
+                        input {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: $dark-gray;
+                            padding: 8px 12px;
+                            border: 1px solid $blue;
+                            background-color: #fff;
+                            min-width: 300px;
+                            transition: border 0.3s ease;
+                            border-radius: 10px;
+
+                            &:focus {
+                                border: 1px solid $dark-gray;
+                            }
+                        }
+                    }
+                }
+
+                .shipping-method {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &__title {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: $dark-gray;
+                    }
+
+                    &__list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .shipping-method__item {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .shipping-method__open-button {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                .radio {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 16px;
+                                    height: 16px;
+                                    border: 1px solid $blue;
+                                    padding: 2px;
+                                    border-radius: 50%;
+                                    .checked-radio {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: #fff;
+                                        border-radius: 50%;
+                                    }
+                                }
+
+                                &.checked {
+                                    .radio .checked-radio {
+                                        background-color: $blue;
+                                    }
+                                }
+                            }
+
+                            .shipping-method__info {
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: max-height 0.3s ease;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                                opacity: 0;
+                                transition: all 0.3s ease;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 16px;
+
+                                &.active {
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                    opacity: 1;
+                                }
+
+                                .inputs-row {
+                                    display: flex;
+                                    gap: 24px;
+
+                                    .input-item {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 5px;
+
+                                        label {
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            color: $blue;
+                                        }
+
+                                        input {
+                                            font-size: 18px;
+                                            font-weight: 500;
+                                            color: $dark-gray;
+                                            padding: 8px 12px;
+                                            border: 1px solid $blue;
+                                            background-color: #fff;
+                                            min-width: 300px;
+                                            transition: border 0.3s ease;
+                                            border-radius: 10px;
+
+                                            &:focus {
+                                                border: 1px solid $dark-gray;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cart-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                max-height: 250px;
+                overflow-y: auto;
+                max-width: 450px;
+            }
+
+            .cart-item {
+                display: flex;
+                gap: 12px;
+
+                .image-block {
+                    flex: 0 0 20%;
+                    border: 1px solid $light-blue;
+                    border-radius: 5px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .cart-item__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .product-name {
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+
+                    .product-price {
+                        font-size: 12px;
+                        color: $blue;
+                        flex-grow: 1;
+                    }
+
+                    .product-count {
+                        display: flex;
+                        gap: 10px;
+                        background-color: $light-blue;
+                        color: $blue;
+                        padding: 4px 8px 2px;
+                        border-radius: 10px;
+
+                        button {
+                            color: $blue;
+                            font-size: 14px;
+                            font-weight: 600;
+                            margin-top: -2px;
+                        }
+
+                        p {
+                            color: $dark-gray;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order-success__modal {
+    .modal__content {
+        max-width: 400px;
+
+        .order-success__content {
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .order-success__text {
+                font-size: 16px;
+                font-weight: 400;
+
+                span {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.home-page-content {
+    .categories__block {
+        padding: 15px 0px 40px;
+        .categories__title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+
+        .categories__list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+
+            .category__item {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid #fff;
+
+                &-name {
+                    padding-top: 16px;
+                    font-size: 22px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 20%;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 120%;
+                    color: #fff;
+                    font-weight: 500;
+                    z-index: 2;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    transition: transform 0.5s ease;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    border: 1px solid #ebe9e9;
+                    cursor: pointer;
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .gender-cloth__section {
+        padding: 40px 0px 80px;
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .gender-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 100%;
+
+            &__item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+                transition: box-shadow 0.5s ease;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                span {
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(0, 0, 0, 0.3) 25%,
+                        rgba(0, 0, 0, 0.6) 50%,
+                        rgba(0, 0, 0, 0.8) 75%,
+                        rgba(0, 0, 0, 0.8) 100%
+                    );
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    height: 20%;
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #fff;
+                    padding-top: 10%;
+                    width: 100%;
+                    justify-content: center;
+                    transition: height 0.5s ease-out;
+                }
+
+                &:hover {
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+                    span {
+                        height: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    .information__block {
+        padding-bottom: 80px;
+
+        .description {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &__title {
+                font-weight: 600;
+            }
+        }
+
+        .you-need-to-know {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 16px 0px 0px;
+            border-top: 1px solid #d8d8d8;
+
+            &__title {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            &__desc {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 120%;
+
+                &.desc__title {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
